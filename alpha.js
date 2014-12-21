@@ -12,32 +12,32 @@ switch(laser_cat) {
             var damageThisRound = (Math.floor(Math.random()*5 + 1))
             var totalDamage = 0 
         while (slaying) {
-    if (youHit) {
-        console.log("You hit laser cat and did " + damageThisRound + " damage against the nefarious beast!");
-            totalDamage += damageThisRound;
-    if (totalDamage >= 3) {
-        console.log("You have defeated laser cat!!!  You go about your way through the post-apocalyptic ruin, wary of more laser cats.");
-        slaying = false;
-    } else {
-    youHit = Math.floor(Math.random() * 2);
-}
-    } else {
-    console.log("You fire and miss--laser cat nukes you!");
-    slaying = false;
-    }    
-    break;
-}
+            if (youHit) {
+                console.log("You hit laser cat and did " + damageThisRound + " damage against the nefarious beast!");
+                    totalDamage += damageThisRound;
+                if (totalDamage >= 3) {
+                    console.log("You have defeated laser cat!!!  You go about your way through the post-apocalyptic ruin, wary of more laser cats.");
+                    slaying = false;
+                } else {
+                    youHit = Math.floor(Math.random() * 2);
+                }
+            } else {
+                console.log("You fire and miss--laser cat nukes you!");
+                slaying = false;
+            }    
+            break;
+        }
     } else {
       console.log("You're not equipped OR smart? Well, if you were smarter, you probably wouldn't have tried to fight a mutant laser cat. You have been baked to a crackling, popping crisp by laser cat's searing gaze!");
     }
     break;
   case 'PAY':
-    var money = prompt("All right, we'll scatter our currency in an attempt to distract it. Do you have any cat treats (YES or NO)?").toUpperCase();
-    var dollars = prompt("Are your cat treats goose pate flavored?").toUpperCase();
-    if(money === 'YES' && dollars === 'YES') {
+    var haveTreats = prompt("All right, we'll scatter our currency in an attempt to distract it. Do you have any cat treats (YES or NO)?").toUpperCase();
+    var isGoosePateFlavored = prompt("Are your cat treats goose pate flavored?").toUpperCase();
+    if(haveTreats === 'YES' && isGoosePateFlavored === 'YES') {
       console.log("Great! You distract the whiskered beast with a delicious snack and continue on your merry way.");
     } else {
-      console.log("No! This laser cat only takes liver pate flavored treats. You get vaporized!");
+      console.log("No! This laser cat only takes liver pate flavored treats. Too bad you don't have any. You get vaporized!");
     }
     break;
   case 'RUN':
