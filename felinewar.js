@@ -1,3 +1,14 @@
+var prompt = function(prompt) {
+    console.log(prompt);
+    return readline();
+}
+
+var console = {
+    log: function(output) {
+        debug(output)  
+    }
+};
+
 var welcome = prompt("Welcome to Laser Cat, a post-apocalyptic game of feline warfare! Hit OK to continue.")
 var laser_cat = prompt("You're walking through a post-apocalyptic urban core, minding your own business, and you run into a laser-equipped cat! Do you FIGHT, PAY in valuable cat treats (the currency of the future), or RUN?").toUpperCase();
 
@@ -25,8 +36,8 @@ switch(laser_cat) {
                 console.log("You fire and miss--laser cat nukes you!");
                 slaying = false;
             }    
-            break;
         }
+        break;
     } else {
       console.log("You're not equipped OR smart? Well, if you were smarter, you probably wouldn't have tried to fight a mutant laser cat. You have been baked to a crackling, popping crisp by laser cat's searing gaze!");
     }
