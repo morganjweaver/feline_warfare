@@ -18,15 +18,15 @@ var places = {
   Sick_Bay: {
     description: 'You enter the ship\'s sick bay.  Cryo rehabilitation gear and an antigravity operating bed cram the tiny space.',
     next_places: ['Spacecraft'],
-  }
+  },
   Chinchilla_Mart: {
     description: 'You are inside the remnants of a Chinchilla Mart. The floor is dusted with scraps of neon packaging.  You can almost hear the Chinchilla Mart jingle ringing in your ears.  An information kiosk sits in one corner, luckily powered by its nuclear battery.',
     next_places: ['Alleyway', 'Kiosk', 'Soylent Refinery'],
-  }
+  },
   Soylent_Refinery: {
     description: 'The Soylent refinery has clearly been pillaged of its various nutrition-rich, food-like wafers.  Vats and conveyor belts sit empty, and an eerie smell haunts the large factory floor.',
     next_places: ['Chinchilla Mart'],
-  }
+  },
   Kiosk: {
     description: 'You wander over to the battered kiosk.  A screen offers several news articles and what appear to be federally sponsored survival information for megafeline emergencies.  Enter a number to access an article or leave the kiosk.',
     articles: [
@@ -53,4 +53,4 @@ var places = {
     ]
   }
 }
-}
+
