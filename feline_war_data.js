@@ -47,8 +47,36 @@ var places = {
         contents: '<UNICORP Global Push, November 1, 3011, 12:00> Please enter your language or corperate nomenclature code for non-standard English.  Clowder positively identified as Lasercat threat and confirmed by all major corporate and government intelligences.  Remain in your shelters and do not leave for any reason.  RADIC, UNIC, EURASIA, and ANTARC forces are currently attempting to contain all Lasercats for further research and experimentation. DO NOT open any food rations (dehydrated, tablets, modules or threads) containing liver pate or suspected imitation liver pate flavoring. Shelter guests will be advised to leave upon threat neutralization. </UNICORP Global Push>',
       },
       {
-        title: 'Attack NeuTralIzing Multi-Edible Organic Weaponry (ANTIMEOW)',
-        contents: '',
+        title: "Attack NeuTralIzing Multi-Edible Organic Weaponry (ANTIMEOW)"
+        contents: "1. 	Cat Attack Cookies: A nutrious treat for those special occasions.\n \n"
+'Ingredients \n' +
+'1 C	Whole brown rice flour \n' +
+'1/4 C	Soy flour \n' +
+'3 t	Catnip \n' +
+'1	Egg \n' +
+'1/3 C	Almond Milk \n' +
+'2 T	Wheat germ \n' +
+'1/3 C	Almond FLour \n' +
+'1 T	Unsulfurated molasses \n' +
+'2 T	Olive Oil \n\n' +
+
+'Directions\n' +
+'Preheat oven to 350F. Mix dry ingredients together. Add molasses, egg, oil and almond milk. Roll out flat onto oiled cookie sheet and cut into small, cat bite-sized pieces. Bake for 20 minutes. Let cool and store in tightly sealed container. \n' +
+
+'Your lil furbaby will just adores these. Remember though....it\'s just a treat, not a meal! \n\n' +
+
+
+'2. Kitty Heaven Sardine Suprise: A toothsome delicacy for good kitties \n\n' +
+
+
+'Ingredients \n' +
+'2	Tins of sardines in oil (do not drain)\n' +
+'2/3 C	Cooked brown rice\n' +
+'1 T	Pureed liver (or canned liver cat food)\n' +
+'1/4 C	Chopped parsley\n\n' +
+
+'Directions\n' +
+'Combine all ingredients and mix well. Shape into balls of desired size or simply spoon into cat\'s dish and serve. These treats may be stored in the refrigerator for up to three days, and may also be frozen.'
       },
     ]
   }
