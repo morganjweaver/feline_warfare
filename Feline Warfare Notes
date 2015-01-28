@@ -65,3 +65,10 @@ COLORS: Calico, Black, Fluffy White, Purple, Neon Leopard
 NAMES: Mr. Whiskas, Peaches, Admiral Fluff-Muffin, Dr. Meow, Spicy Bob
 
 CLASS: KITTEN, JUNIOR CADET, 
+
+ITEMS: Mutant Chinchilla Pelt (HP + 5)
+	Goose Pate Cat Treats (distracts laser cat)
+	Soylent Blue Cat Treats (50-50 chance distract laser cat)
+	Cat litter granules (does nothing)
+	Laser pointer (drives laser cat mad, damage x 2)
+	

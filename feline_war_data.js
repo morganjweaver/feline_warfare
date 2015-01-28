@@ -81,4 +81,61 @@ var places = {
     ]
   }
 }
+ 
+var laser_cats = {
+  name: ['Mr. Whiskas', 'Peaches','Dr. Meow', 'Spicy Bob',],
+  color:['Calico', 'Black', 'Extra Fluffy White', 'Purple',],
+  rank:['Kitten', 'Junior Cadet', 'Shock Troop', 'Covert Ops',],
+  HP:[2, 5, 7, 10]
+//HP stands for 'Hit Points' or total damage laser cat may sustain
+}
 
+var boss_cat = {
+  name: 'Admiral Fluff-Muffin',
+  color: 'Neon Leapard',
+  rank: 'Admiral--Use extreme caution!',
+  HP: 15
+}
+
+var items = {
+  //data structure experiment to remove item from inventory after use
+  pelt: { 
+    var pelt = 'pelt';
+    HP = (HP + 5);
+    console.log('You don the mutant chinchilla pelt and feel its freakishly soft and fluffy power flowing through you.  Your hit points rise by 5!';
+    item_removal(pelt);
+    }
+  pate_treats: {
+    //end laser cat round/cat runs away
+    console.log('You hurl the goose pate flavored laser treats far off into the distance.  The laser cat rushes away in an unearthly fury to recover the very substance which may have tempted it to Earth. . .';
+    slaying = false;
+    }
+  soylent_treats: {
+  var soylent_random = (Math.floor(Math.random() * 2));
+  if soylent_random {
+    console.log('You hurl the off-brand soylent blue cat treats into a nearby crater.  The laser cat must be very hungry--it tears off towards the generic food product, only slightly preferred over human flesh.'
+    slaying = false;
+    } else {
+    console.log('Did you think the laser cat would go after such an inferior pet product?');
+    //continues battle here.  how to launch battle?
+      }
+    }
+  granules: {
+    console.log('Nothing happens--what did you think you could do by throwing cat litter, anyway?')
+    //continue battle here/launch battle module
+    }
+  laser: {
+    //for only this match.  can I do this or need to create separate battle module?
+    console.log('You rip the ultimate antifeline weapon out of your pocket--a laser pointer!  The laser cat starts going mad as you make the vivid red dot zigzag across buildings, cars, rubble and trash, its gigantic head whippng back and forth uncontrollably as it emits a series of short, twittering sounds of kitty excitement.  It seems very confused--time to attack!';
+    damageThisRound = damageThisRound*2;
+    }
+
+
+//thic code removes certain items from inventory after they have been used, such as treats.  By principle of DRY, this shouldn't be in EVERY item's mini program.  How to refer to this function so that only the item character just used is removed? 
+var item_removal = function('item_name'){
+  for(var i = inventory.length - 1; i >= 0; i--) {
+  if(inventory[i] === item_name) {
+    inventory.splice(i, 1);
+    }
+  }
+}
