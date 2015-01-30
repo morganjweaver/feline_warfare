@@ -40,3 +40,9 @@ var command_goto = function(place) {
     }
  
 };
+
+var inventory = {}
+
+var use = function() {
+    
+
