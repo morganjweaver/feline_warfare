@@ -97,6 +97,10 @@ boss_cat: {
   rank: ['Admiral--Use extreme caution!',],
   HP: [15,],
 },
+{
+  title: 'Exit Kiosk';
+
+},
 }
 
 /*

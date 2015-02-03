@@ -48,6 +48,13 @@ var test_pretty_format = function() {
 }
 
 var look = function() {
+  if ('articles' in current_place) {
+    console.log('There are some things you can read here:');
+    num_articles = current_place.keys(obj).length; // I think you need a semicolong here.
+    for (i=0; i<=num_articles; i++) {
+      console.log(i + ":" + articles[i]); // might want to do i + ' : '
+    }
+  }
   console.log(current_place.description);
   console.log('These are the places you can go next: ' + 
     current_place.next_places.map(pretty_format));
@@ -148,6 +155,12 @@ var run_game = function(game_data, start_place) {
       //finds chosen command in commands list, takes input argument
       commands[input.command].command(input.argument)
     }
+  }
+}
+
+var read = function(num){
+  if ('articles' in places[current_place]) {
+
   }
 }
 
