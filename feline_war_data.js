@@ -22,7 +22,7 @@ places: {
     next_places: ['spacecraft'],
   },
   chinchilla_mart: {
-    description: 'You are inside the remnants of a Chinchilla Mart. The floor is dusted with scraps of neon packaging.  You can almost hear the Chinchilla Mart jingle ringing in your ears.  An information kiosk sits in one corner, luckily powered by its nuclear battery.',
+    description: 'You are inside the remnants of a Chinchilla Mart. The floor is dusted with scraps of neon packaging.  You can almost hear the Chinchilla Mart jingle ringing in your ears, as sung by a plump, smarmy, animated furball.  An information kiosk sits in one corner, luckily powered by its nuclear battery.',
     next_places: ['alleyway', 'kiosk', 'soylent_refinery'],
   },
   soylent_refinery: {
@@ -32,6 +32,7 @@ places: {
   kiosk: {
     description: 'You wander over to the battered kiosk.  A screen offers several news articles and what appear to be federally sponsored survival information for megafeline emergencies.  Enter a number to access an article or leave the kiosk.',
   next_places: ['chinchilla_mart'],
+
   articles: [
       { 
         title: 'Xelebrity News',
@@ -97,8 +98,8 @@ boss_cat: {
   rank: ['Admiral--Use extreme caution!',],
   HP: [15,],
 },
-{
-  title: 'Exit Kiosk';
+kjh: {
+  title: 'Exit Kiosk'
 
 },
 }

@@ -48,17 +48,24 @@ var test_pretty_format = function() {
 }
 
 var look = function() {
+  console.log(current_place.description);
   if ('articles' in current_place) {
     console.log('There are some things you can read here:');
-    num_articles = current_place.keys(obj).length; // I think you need a semicolong here.
-    for (i=0; i<=num_articles; i++) {
-      console.log(i + ":" + articles[i]); // might want to do i + ' : '
+    num_articles = Object.keys(current_place.articles).length; // How to reference articles in current place? Want to count # of articles
+    for (i=0; i<num_articles; i++) {
+      console.log(i + ":" + current_place.articles[i].title ); // might want to do i + ' : '
     }
   }
-  console.log(current_place.description);
   console.log('These are the places you can go next: ' + 
     current_place.next_places.map(pretty_format));
 }
+
+var read = function(num){
+  if ('articles' in current_place) {
+    console.log(current_place.articles[num].contents)
+  }
+}
+
 
 var move = function(place) {
     current_place = places[place];
@@ -92,7 +99,9 @@ var command_quit = function(input){
 var command_help = function(input) {
   help();
 }
-
+var command_read = function(input) {
+  read(input);
+}
 var commands = {
   move : {
     help : 'move to location specified',
@@ -109,6 +118,10 @@ var commands = {
   help : {
     help: 'displays available commands',
     command: command_help,
+  },
+  read : {
+    help: 'read printed matter',
+    command: command_read,
   }
 }
 
@@ -158,11 +171,7 @@ var run_game = function(game_data, start_place) {
   }
 }
 
-var read = function(num){
-  if ('articles' in places[current_place]) {
 
-  }
-}
 
 
 //is this legit?  add to end of every item script?
