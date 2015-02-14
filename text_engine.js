@@ -87,6 +87,7 @@ var command_move = function(place) {
     } else {
         move(place);
     }  
+    cat_battle();
 };
 
 var command_look = function(place) {

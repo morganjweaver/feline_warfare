@@ -139,7 +139,7 @@ kjh: {
     }
 
 
-//thic code removes certain items from inventory after they have been used, such as treats.  By principle of DRY, this shouldn't be in EVERY item's mini program.  How to refer to this function so that only the item character just used is removed? 
+//this code removes certain items from inventory after they have been used, such as treats.  By principle of DRY, this shouldn't be in EVERY item's mini program.  How to refer to this function so that only the item character just used is removed? 
 var item_removal = function('item_name'){
   for(var i = inventory.length - 1; i >= 0; i--) {
   if(inventory[i] === item_name) {
