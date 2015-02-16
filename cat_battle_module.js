@@ -27,8 +27,9 @@ switch(cat_battle) {
             break;
         }
     } else {
-      console.log("You're not equipped OR smart? Well, 
-        if you were smarter, you probably wouldn't have tried to fight a mutant laser cat. You have been baked to a crackling, popping crisp by laser cat's searing gaze!");
+      console.log("You're not equipped OR smart? Well," +
+        "if you were smarter, you probably wouldn't have tried to fight a mutant laser cat." +
+        " You have been baked to a crackling, popping crisp by laser cat's searing gaze!");
     }
     break;
   case 'PAY':
