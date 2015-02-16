@@ -5,6 +5,6 @@ load('text_engine.js');
 
 load('feline_war_data.js');
 
-load('cat_battle_module.js');
+//load('cat_battle_module.js');
 
-run_game(feline_war, 'kiosk');
+run_game(feline_war, 'alleyway');

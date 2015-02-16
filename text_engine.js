@@ -38,13 +38,20 @@ var pretty_format = function(key) {
   var ret = '';
   for (i in split_key) { // looping over arrays returns indecies
     var word = split_key[i];
-    ret += word[0].toUpperCase() + word.substring(1, word.lenght) + ' ';
+    ret += word[0].toUpperCase() + word.substring(1, word.length) + ' ';
   }
   return ret.substring(0, ret.length -1);
 }
 
 var test_pretty_format = function() {
   console.log('Pretty Format: ' + pretty_format('chic_mart'));
+}
+
+
+var quit = function() {
+  console.log("Goodbye");
+  process.exit(code=0);
+
 }
 
 var look = function() {
@@ -87,13 +94,12 @@ var command_move = function(place) {
     } else {
         move(place);
     }  
-    cat_battle();
+    //cat_battle();
 };
 
 var command_look = function(place) {
   look();
 }
-
 var command_quit = function(input){
   quit();
 }
@@ -136,16 +142,18 @@ var commands = {
 // string before a space, the argument is everything outside
 // the space.
 var parse_input = function(input) {
-    //need to make parser separate command and arg, save seperately
-    var lower_input = input.toLowerCase();
+  var lower_input = input.toLowerCase();
     // Move(Chinchilla Mart) --> move(chinchilla mart)
+  if ( lower_input.indexOf(' ') == -1) {
+    user_parsed_command = lower_input;
+  } else {
     //var user_text_underscored = lower_input.replace(/ /g,"_");
     //move(chinchilla mart) --> move(chinchilla_mart)
     // to do: fix parser
-    var user_parsed_command = lower_input.slice(0, lower_input.indexOf(' '));
-    var user_parsed_arg = lower_input.slice(lower_input.indexOf(' ') +1, lower_input.length);
-    user_parsed_arg = user_parsed_arg.replace(/ /g,"_");
-  
+      var user_parsed_command = lower_input.slice(0, lower_input.indexOf(' '));
+      var user_parsed_arg = lower_input.slice(lower_input.indexOf(' ') +1, lower_input.length);
+      user_parsed_arg = user_parsed_arg.replace(/ /g,"_");
+  };
   var ret = {
     command : user_parsed_command,
     argument : user_parsed_arg,
@@ -155,7 +163,7 @@ var parse_input = function(input) {
   return ret;
 }
 
-
+// main game loop/engine
 var run_game = function(game_data, start_place) {
   places = game_data.places;
   move(start_place);
@@ -163,6 +171,8 @@ var run_game = function(game_data, start_place) {
   while (true) {
     input = parse_input(prompt('What do you want to do?'));
     if (!(input.command in commands)) {
+      console.log(input.command);
+      console.log(commands);
       console.log('that doesn\'t look like a valid command.');
       help(); 
     } else {
