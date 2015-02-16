@@ -27,7 +27,8 @@ switch(cat_battle) {
             break;
         }
     } else {
-      console.log("You're not equipped OR smart? Well, if you were smarter, you probably wouldn't have tried to fight a mutant laser cat. You have been baked to a crackling, popping crisp by laser cat's searing gaze!");
+      console.log("You're not equipped OR smart? Well, 
+        if you were smarter, you probably wouldn't have tried to fight a mutant laser cat. You have been baked to a crackling, popping crisp by laser cat's searing gaze!");
     }
     break;
   case 'PAY':
@@ -50,3 +51,4 @@ switch(cat_battle) {
     break;
   default:
     console.log("That entry didn't make sense to me. Rerun the code and try again, this time picking FIGHT, PAY, or RUN!");
+}
