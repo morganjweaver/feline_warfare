@@ -3,7 +3,6 @@ places: {
   alleyway: {
     description: 'You find yourself in a filthy alleyway of scorched concrete and bones.  A dumpster sits to one side.',
     next_places: ['spacecraft', 'chinchilla_mart', 'bomb_shelter' ],
-
   },
   bomb_shelter: {
     description: 'You are now standing in a shabby concrete bunker.  There is a table with a couple of splintered chairs, a couple of cabinets, and. . . what\'s this. . . a trap door?',

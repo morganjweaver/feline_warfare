@@ -25,6 +25,7 @@ var current_place = {};
 var commands = {};
 var inventory = {};
 var places = {};
+var move_counter = 0;
 
 
 //
@@ -36,7 +37,7 @@ var places = {};
 var pretty_format = function(key) {
   var split_key = key.split("_");
   var ret = '';
-  for (i in split_key) { // looping over arrays returns indecies
+  for (i in split_key) { // looping over arrays returns indicies
     var word = split_key[i];
     ret += word[0].toUpperCase() + word.substring(1, word.length) + ' ';
   }
@@ -75,6 +76,10 @@ var read = function(num){
 
 
 var move = function(place) {
+    move_counter += 1;
+    if ((move_counter % 2) == 0) {
+      cat_battle();
+    }
     current_place = places[place];
     look(place);
 }
@@ -94,7 +99,6 @@ var command_move = function(place) {
     } else {
         move(place);
     }  
-    //cat_battle();
 };
 
 var command_look = function(place) {
@@ -167,7 +171,7 @@ var parse_input = function(input) {
 var run_game = function(game_data, start_place) {
   places = game_data.places;
   move(start_place);
-  //maybe substitute player_alive or boss_cat consition for true below?
+  //maybe substitute player_alive or boss_cat condition for true below?
   while (true) {
     input = parse_input(prompt('What do you want to do?'));
     if (!(input.command in commands)) {

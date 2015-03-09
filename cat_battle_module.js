@@ -19,7 +19,7 @@ var cat_battle = function() {
                     var damageThisRound = (Math.floor(Math.random()*5 + 1));
                     var totalDamage = 0;
                 while (slaying) {
-                    if (youHit) {
+                    if (totalDamage < 5) {
                         console.log("You hit laser cat and did " + damageThisRound + " damage against the nefarious beast!");
                             totalDamage += damageThisRound;
                         if (totalDamage >= 3) {
