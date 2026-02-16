@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A post-apocalyptic text adventure about laser cats from outer space">
+    <title>🐱 FELINE WARFARE 🚀</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="stars"></div>
+    <div class="container">
+        <header class="game-header">
+            <div class="glitch-wrapper">
+                <h1 class="glitch" data-text="FELINE WARFARE">FELINE WARFARE</h1>
+            </div>
+            <p class="subtitle">🌟 A Post-Apocalyptic Adventure 🌟</p>
+            <p class="tagline">Laser Cats • Year 3011 • Survive</p>
+        </header>
+
+        <div class="terminal-wrapper">
+            <div class="terminal-header">
+                <div class="terminal-buttons">
+                    <span class="btn-close"></span>
+                    <span class="btn-minimize"></span>
+                    <span class="btn-maximize"></span>
+                </div>
+                <div class="terminal-title">FELINE_WARFARE.exe</div>
+            </div>
+
+            <div class="terminal-body">
+                <div id="output" class="output">
+                    <div class="boot-sequence">
+                        <p>> INITIALIZING FELINE WARFARE PROTOCOL...</p>
+                        <p>> LOADING LASER CAT DATABASE...</p>
+                        <p>> YEAR 3011 • POST-SIRIUS INVASION</p>
+                        <p>> TYPE 'help' FOR COMMANDS</p>
+                        <p class="separator">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</p>
+                    </div>
+                </div>
+
+                <div class="input-area">
+                    <span class="prompt">&gt;</span>
+                    <input type="text" id="commandInput" class="command-input" autocomplete="off" autofocus placeholder="enter command...">
+                </div>
+            </div>
+        </div>
+
+        <div class="stats-panel">
+            <div class="stat-item">
+                <span class="stat-label">HP:</span>
+                <span id="playerHP" class="stat-value">100</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label">MOVES:</span>
+                <span id="moveCount" class="stat-value">0</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label">CATS DEFEATED:</span>
+                <span id="catsDefeated" class="stat-value">0</span>
+            </div>
+        </div>
+
+        <div class="quick-commands">
+            <button class="quick-btn" onclick="executeCommand('look')">👁️ LOOK</button>
+            <button class="quick-btn" onclick="executeCommand('help')">❓ HELP</button>
+            <button class="quick-btn" onclick="saveGame()">💾 SAVE</button>
+            <button class="quick-btn" onclick="loadGame()">📂 LOAD</button>
+        </div>
+    </div>
+
+    <script src="feline_war_data.js"></script>
+    <script src="cat_battle_module.js"></script>
+    <script src="game.js"></script>
+</body>
+</html>
