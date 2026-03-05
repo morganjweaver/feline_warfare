@@ -13,4 +13,4 @@ On Macs, jsc can be invoked from the System Library like:
 
     /System/Library/Frameworks/JavaScriptCore.framework/Versions/A/Resources/jsc feline_war_jsc.js 
 
-
+Dev note: DNS provided by Namecheap, Netlify DNS forwarding.
